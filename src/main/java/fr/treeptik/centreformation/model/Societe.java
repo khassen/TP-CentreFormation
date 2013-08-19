@@ -15,7 +15,7 @@ import javax.persistence.Table;
 public class Societe implements Serializable{
 
 	private static final long serialVersionUID = 1L;
-	
+//	id
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer codeSociete;

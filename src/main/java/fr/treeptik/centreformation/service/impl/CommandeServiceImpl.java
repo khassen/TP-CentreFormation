@@ -12,12 +12,12 @@ public class CommandeServiceImpl extends GenericServiceImpl<Commande,Integer, Co
 
 	
 	@Autowired
-	private CommandeDAO dao;
+	private CommandeDAO commandedao;
 	
 	@Override
 	protected CommandeDAO getDao() {
 		// TODO Auto-generated method stub
-		return dao;
+		return commandedao;
 	}
 
 }

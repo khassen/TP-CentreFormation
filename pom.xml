@@ -8,7 +8,7 @@
 	<description>TP java pour illustrer spring - hibernate - maven</description>
 
 	<properties>
-		<version.java>1.6</version.java>
+		<version.java>1.7</version.java>
 		<hibernate.version>4.2.3.Final</hibernate.version>
 		<spring.version>3.2.3.RELEASE</spring.version>
 		<version.maven.jar.plugin>2.4</version.maven.jar.plugin>
@@ -83,6 +83,12 @@
 			<version>4.2.3.Final</version>
 		</dependency>
 
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
+		</dependency>
+
 		<!-- Base de données MYSQL -->
 
 		<dependency>
@@ -107,10 +113,14 @@
 
 	<build>
 
-		<!-- filtrer les ressources et voir si ca existe dans proprieté -->
+<!-- 		filtrer les ressources et voir si ca existe dans proprieté -->
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+			<resource>
+				<directory>src/test/resources</directory>
 				<filtering>true</filtering>
 			</resource>
 		</resources>
